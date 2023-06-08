@@ -184,7 +184,7 @@ def trabalheconosco():
                 telefone = form_trabalheconosco.telefone.data
                 email = form_trabalheconosco.email.data
                 nome_arquivo = salvar_pdf(arquivo_pdf, nome_completo)
-                caminho_arquivo = f"foxdistribuidora\static/curriculo\{nome_arquivo}"
+                caminho_arquivo = f"foxdistribuidora/static/curriculo/{nome_arquivo}"
                 if caminho_arquivo:
                     email_curriculo(caminho_arquivo, nome_completo, telefone, email)
                 flash('Currículo enviado com sucesso', 'alert-success')
