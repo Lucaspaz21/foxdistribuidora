@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <h1>Preencha os campos e nos envie seu currículo</h1>
+    <hr>
+    <div class="row">
+
+        <div class="col">
+           <legend>Contato</legend>
+             <form method="POST" action="" class="border p-3">
+               {{ form_contato.csrf_token }}
+               <fieldset>
+                   
+                   <div class="form-group">
+                       {{ form_contato.nome.label(class="form-control-label") }}
+                       {% if form_contato.nome.errors %}
+                            {{ form_contato.nome(class="form-control is-invalid") }}
+                       <div class="invalid-feedback">
+                            {% for erro in form_contato.nome.errors %}
+                                {{ erro }}
+                            {% endfor %}
+                       </div>
+                       {% else %}
+                            {{ form_contato.nome(class="form-control") }}
+                       {% endif %}
+                   </div>
+                   
+                   <div class="form-group">
+                       {{ form_contato.empresa.label(class="form-control-label") }}
+                       {{ form_contato.empresa(class="form-control") }}
+                   </div>
+                   <div class="form-group">
+                       {{ form_contato.cnpj.label(class="form-control-label") }}
+                       {{ form_contato.cnpj(class="form-control") }}
+                   </div>
+
+                   <div class="form-group">
+                       {{ form_contato.email_contato.label(class="form-control-label") }}
+                       {% if form_contato.email_contato.errors %}
+                            {{ form_contato.email_contato(class="form-control is-invalid") }}
+                       <div class="invalid-feedback">
+                            {% for erro in form_contato.email_contato.errors %}
+                                {{ erro }}
+                            {% endfor %}
+                       </div>
+                       {% else %}
+                            {{ form_contato.email_contato(class="form-control") }}
+                       {% endif %}
+                   </div>
+                   
+                   <div class="form-group">
+                       {{ form_contato.telefone_contato.label(class="form-control-label") }}
+                       {{ form_contato.telefone_contato(class="form-control") }}
+                   </div>
+                   
+                   <div class="form-group">
+                       {{ form_contato.mensagem.label(class="form-control-label") }}
+                       {% if form_contato.mensagem.errors %}
+                            {{ form_contato.mensagem(class="form-control is-invalid", style="height: 200px") }}
+                       <div class="invalid-feedback">
+                            {% for erro in form_contato.mensagem.errors %}
+                                {{ erro }}
+                            {% endfor %}
+                       </div>
+                       {% else %}
+                            {{ form_contato.mensagem(class="form-control", style="height: 200px") }}
+                       {% endif %}
+                   </div>
+                   
+               </fieldset>
+
+               {{ form_contato.botao_contato(class="form-control btn btn-primary mt-4") }}
+           </form>
+       </div>
+
+
+
+        <div class="col">
+           <legend>Dados Pessoais</legend>
+           <form method="POST" enctype="multipart/form-data" action="" class="border p-3">
+               {{ form_trabalheconosco.csrf_token }}
+               <fieldset>
+                   <div class="form-group">
+                       {{ form_trabalheconosco.nomecompleto.label(class="form-control-label") }}
+                       {% if form_trabalheconosco.nomecompleto.errors %}
+                            {{ form_trabalheconosco.nomecompleto(class="form-control is-invalid") }}
+                       <div class="invalid-feedback">
+                            {% for erro in form_trabalheconosco.nomecompleto.errors %}
+                                {{ erro }}
+                            {% endfor %}
+                       </div>
+                       {% else %}
+                            {{ form_trabalheconosco.nomecompleto(class="form-control") }}
+                       {% endif %}
+                   </div>
+                   
+                   <div class="form-group">
+                       {{ form_trabalheconosco.telefone.label(class="form-control-label") }}
+                       {% if form_trabalheconosco.telefone.errors %}
+                            {{ form_trabalheconosco.telefone(class="form-control is-invalid") }}
+                       <div class="invalid-feedback">
+                            {% for erro in form_trabalheconosco.telefone.errors %}
+                                {{ erro }}
+                            {% endfor %}
+                       </div>
+                       {% else %}
+                            {{ form_trabalheconosco.telefone(class="form-control") }}
+                       {% endif %}
+                   </div>
+                   
+                   <div class="form-group">
+                       {{ form_trabalheconosco.email.label(class="form-control-label") }}
+                        {% if form_trabalheconosco.email.errors %}
+                            {{ form_trabalheconosco.email(class="form-control is-invalid") }}
+                       <div class="invalid-feedback">
+                            {% for erro in form_trabalheconosco.email.errors %}
+                                {{ erro }}
+                            {% endfor %}
+                       </div>
+                       {% else %}
+                            {{ form_trabalheconosco.email(class="form-control") }}
+                       {% endif %}
+                   </div>
+                   
+                   <div class="form-group">
+                       {{ form_trabalheconosco.curriculo.label(class="form-control-label") }}
+                       {% if form_trabalheconosco.curriculo.errors %}
+                            {{ form_trabalheconosco.curriculo(class="form-control is-invalid") }}
+                       <div class="invalid-feedback">
+                            {% for erro in form_trabalheconosco.curriculo.errors %}
+                                {{ erro }}
+                            {% endfor %}
+                       </div>
+                       {% else %}
+                            {{ form_trabalheconosco.curriculo(class="form-control") }}
+                       {% endif %}
+                   </div>
+                   
+               </fieldset>
+
+               {{ form_trabalheconosco.botao_confirmar(class="form-control btn btn-primary mt-4") }}
+           </form>
+       </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
