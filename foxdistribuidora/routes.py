@@ -128,11 +128,59 @@ def email_curriculo(caminho, nomecompleto, telefone, email):
             f"\nE-mail: {email}" \
             f"\n\nSegue Anexo"
 
+    corpo_email = f'''
+        <html>
+        <head>
+            <style>
+                body {{
+                    font-family: Arial, sans-serif;
+                    background-color: #f2f2f2;
+                    padding: 20px;
+                }}
+
+                h1 {{
+                    color: #333;
+                }}
+
+                p {{
+                    color: #666;
+                    margin-bottom: 10px;
+                }}
+
+                b {{
+                    color: #000;
+                }}
+
+                .container {{
+                    max-width: 600px;
+                    margin: 0 auto;
+                    background-color: #fff;
+                    padding: 20px;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                }}
+
+                .container h1 {{
+                    font-size: 24px;
+                }}
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>Curriculo de <b>{nomecompleto}</b></h1>  
+                <br>
+                <p>E-mail: <b>{email}</b></p>
+                <p>Telefone: <b>{telefone}</b></p>
+            </div>
+        </body>
+        </html>
+        '''
+
     email_msg = MIMEMultipart()
     email_msg['From'] = login
     email_msg['To'] = login
     email_msg['Subject'] = "Contato - Trabalhe Conosco"
-    email_msg.attach(MIMEText(corpo, 'plain'))
+    email_msg.attach(MIMEText(corpo_email, 'html'))
 
     # pegando anexo
 
