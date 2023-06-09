@@ -1,6 +1,5 @@
 import os
 import secrets
-
 from flask import render_template, url_for, request, flash, redirect
 from foxdistribuidora.forms import FormDadosTrabalheConosco, FormContato
 from foxdistribuidora import app
@@ -19,9 +18,9 @@ def home():
     return render_template('home.html')
 
 
-def salvar_pdf(arquivo_pdf, nome_completo):
+def salvar_pdf(arquivo_pdf, nome_completo, codigo):
     if arquivo_pdf:
-        nome_arquivo = secure_filename(nome_completo + '.pdf')
+        nome_arquivo = secure_filename(nome_completo + codigo + '.pdf')
         caminho_completo = os.path.join(app.root_path, 'static/curriculo', nome_arquivo)
         try:
             arquivo_pdf.save(caminho_completo)
@@ -231,7 +230,8 @@ def trabalheconosco():
                 nome_completo = form_trabalheconosco.nomecompleto.data
                 telefone = form_trabalheconosco.telefone.data
                 email = form_trabalheconosco.email.data
-                nome_arquivo = salvar_pdf(arquivo_pdf, nome_completo)
+                codigo = codigo = secrets.token_hex(6)
+                nome_arquivo = salvar_pdf(arquivo_pdf, nome_completo, codigo)
                 caminho_arquivo = f"foxdistribuidora/static/curriculo/{nome_arquivo}"
                 if caminho_arquivo:
                     email_curriculo(caminho_arquivo, nome_completo, telefone, email)
