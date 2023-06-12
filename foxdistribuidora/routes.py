@@ -87,7 +87,7 @@ def email_contato(nome_de_contato, empresa, cnpj, e_mail, telefone, mensagem):
     '''
 
     msg = email.message.Message()
-    msg['Subject'] = f"Venda mensal - "
+    msg['Subject'] = f"Contato - "
     msg['From'] = 'lucas.paz12@gmail.com'
     msg['To'] = 'lucas.paz12@gmail.com'
     password = 'hhevbfduxzqqyetd'
