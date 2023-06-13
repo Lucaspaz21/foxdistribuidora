@@ -87,10 +87,10 @@ def email_contato(nome_de_contato, empresa, cnpj, e_mail, telefone, mensagem):
     '''
 
     msg = email.message.Message()
-    msg['Subject'] = f"Contato - "
-    msg['From'] = 'lucas.paz12@gmail.com'
+    msg['Subject'] = f"E-mail de contato "
+    msg['From'] = 'lspaz2125@gmail.com'
     msg['To'] = 'lucas.paz12@gmail.com'
-    password = 'hhevbfduxzqqyetd'
+    password = 'yfwaprhmwprrnfcd'
     msg.add_header('Content-Type', 'text/html')
     msg.set_payload(corpo_email)
 
@@ -105,10 +105,10 @@ def email_contato(nome_de_contato, empresa, cnpj, e_mail, telefone, mensagem):
 def email_curriculo(caminho, nomecompleto, telefone, email):
     # 1 - startar o servidor SMTP
 
-    host = "smtp.gmail.com"
+     host = "smtp.gmail.com"
     port = "587"
-    login = "lucas.paz12@gmail.com"
-    senha = "hhevbfduxzqqyetd"
+    login = "lspaz2125@gmail.com"
+    senha = "yfwaprhmwprrnfcd"
 
     # conectando no servidor
     server = smtplib.SMTP(host, port)
