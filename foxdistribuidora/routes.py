@@ -105,7 +105,8 @@ def email_contato(nome_de_contato, empresa, cnpj, e_mail, telefone, mensagem):
 def email_curriculo(caminho, nomecompleto, telefone, email):
     # 1 - startar o servidor SMTP
 
-     host = "smtp.gmail.com"
+     
+    host = "smtp.gmail.com"
     port = "587"
     login = "lspaz2125@gmail.com"
     senha = "yfwaprhmwprrnfcd"
