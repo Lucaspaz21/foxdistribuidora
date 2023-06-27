@@ -121,7 +121,7 @@ def email_curriculo(caminho, nomecompleto, telefone, email):
 
     # 2 - construuir o email tipo MINE
 
-    corpo = "Contato Via Site" \
+    corpo = "Contato por Via Site" \
             f"\nNome completo: {nomecompleto}" \
             f"\nTelefone: {telefone}" \
             f"\nE-mail: {email}" \
