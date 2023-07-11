@@ -1,19 +1,15 @@
-
 .bg-cover {
     background-size: cover !important;
 }
 
 .custom-hr {
-      border-top: 5px solid black;
-    }
-
+    border-top: 5px solid black;
+}
 
 body {
     min-height: 100vh;
 }
 
-<style>
-    .custom-gradient {
-        background-image: linear-gradient(to bottom right, #ff8c00, #b65e00, #8b4513);
-    }
-</style>
+.custom-gradient {
+    background-image: linear-gradient(to bottom right, #ff8c00, #b65e00, #8b4513);
+}
