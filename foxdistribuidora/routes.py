@@ -10,7 +10,6 @@ from email.mime.text import MIMEText
 #para enviar email com anexo
 from email.mime.base import MIMEBase
 from email import encoders
-import os
 from werkzeug.utils import secure_filename
 
 @app.route("/")
