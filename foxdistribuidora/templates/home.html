@@ -3,6 +3,28 @@
 {% block body %}
 
     <style>
+        :root {
+            --cor-primaria-marrom: #C68642;
+            --cor-secundaria-laranja: #E89F58;
+            --cor-terciaria-laranja: #c76804;
+            --cor-destaque-branco: #FFFFFF;
+        }
+
+        .bg-cor-secundaria-laranja {
+            background-color: var(--cor-secundaria-laranja);
+        }
+
+        .bg-cor-terciaria-laranja {
+            background-color: var(--cor-terciaria-laranja);
+        }
+
+        .bg-cor-primaria-marrom {
+            background-color: var(--cor-primaria-marrom) !important;
+        }
+
+        .text-cor-destaque-branco {
+            color: var(--cor-destaque-branco);
+        }
 
     </style>
 
@@ -13,10 +35,10 @@
     <section id="section-parceiros">
     <header class="py-5">
             <div class="container px-lg-5">
-                <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+                <div class="p-4 p-lg-5 bg-cor-primaria-marrom rounded-3 text-center">
                     <div class="m-4 m-lg-5">
-                        <h1 class="display-5 fw-bold">Conheça alguns de nossos parceiros!</h1>
-                        <p class="fs-4">Temos mais de 20 parceiros na missão de trazer os melhores produtos para sua loja.</p>
+                        <h1 class="display-5 text-cor-destaque-branco fw-bold">Conheça alguns de nossos parceiros!</h1>
+                        <p class="fs-4 text-cor-destaque-branco ">Temos mais de 20 parceiros na missão de trazer os melhores produtos para sua loja.</p>
 
                     </div>
                 </div>
@@ -25,72 +47,74 @@
     </section>
     <!-- Page Content-->
         <section class="pt-4">
-            <div class="container px-lg-5">
+            <div class="container px-lg-5 ">
                 <!-- Page Features-->
                 <div class="row gx-lg-5">
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div>
-                                <img src="{{ url_for('static', filename='fotos_site/logo_3m.jpg') }}" alt="" width="60" height="80">
+
+                    <div class="col-lg-6 col-xxl-4 mb-5 ">
+                        <div class="card bg-light border-0 h-100 ">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0 bg-cor-terciaria-laranja">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
+                                <img src="{{ url_for('static', filename='fotos_site/fifty.png') }}" alt="" width="100" height="80">
                                 <hr>
-                                <h2 class="fs-4 fw-bold">Fitas 3M - Imperial </h2>
-                                <p class="mb-0">Fitas isolantes 3M: proteção elétrica confiável e duradoura </p>
+                                <h2 class="fs-4 fw-bold text-cor-destaque-branco">PU-40 FIX</h2>
+                                <p class="mb-0 text-cor-destaque-branco">PU profissional para calheiro</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xxl-4 mb-5">
                         <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
-                                <img src="{{ url_for('static', filename='fotos_site/logo_delflex.png') }}" alt="" width="100" height="80">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0 bg-cor-terciaria-laranja">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-code"></i></div>
+                                <img src="{{ url_for('static', filename='fotos_site/logo_ducor.png') }}" alt="" width="100" height="80">
                                 <hr>
-                                <h2 class="fs-4 fw-bold">Delflex</h2>
-                                <p class="mb-0">Especializada em produção de Sifão para pia tanque lavatório com diversos modelos</p>
+                                <h2 class="fs-4 fw-bold text-cor-destaque-branco">Ducor Tintas</h2>
+                                <p class="mb-0 text-cor-destaque-branco">Tinta Latéx, Tinta Piso, Massa PVA e muito mais</p>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-6 col-xxl-4 mb-5">
                         <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0 bg-cor-terciaria-laranja">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-card-heading"></i></div>
                                 <img src="{{ url_for('static', filename='fotos_site/logo_garin.jfif') }}" alt="" width="100" height="80">
                                 <hr>
-                                <h2 class="fs-4 fw-bold">Garin</h2>
-                                <p class="mb-0">Selantes e colas da Garin: aderência poderosa e durabilidade garantida</p>
+                                <h2 class="fs-4 fw-bold text-cor-destaque-branco">Garin</h2>
+                                <p class="mb-0 text-cor-destaque-branco">Selantes e colas da Garin: aderência poderosa e durabilidade garantida</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xxl-4 mb-5">
                         <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0 bg-cor-terciaria-laranja">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-bootstrap"></i></div>
                                 <img src="{{ url_for('static', filename='fotos_site/logo_trio.png') }}" alt="" width="140" height="80">
                                 <hr>
-                                <h2 class="fs-4 fw-bold">TRIO Eletrônica</h2>
-                                <p class="mb-0">Qualidade associada ao melhor dos preços</p>
+                                <h2 class="fs-4 fw-bold text-cor-destaque-branco">TRIO Eletrônica</h2>
+                                <p class="mb-0 text-cor-destaque-branco">Qualidade associada ao melhor dos preços</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xxl-4 mb-5">
                         <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-code"></i></div>
-                                <img src="{{ url_for('static', filename='fotos_site/logo_ducor.jfif') }}" alt="" width="100" height="80">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0 bg-cor-terciaria-laranja">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
+                                <img src="{{ url_for('static', filename='fotos_site/logo_delflex.png') }}" alt="" width="100" height="80">
                                 <hr>
-                                <h2 class="fs-4 fw-bold">Ducor Tintas</h2>
-                                <p class="mb-0">Tinta Latéx, Tinta Piso, Massa PVA e muito mais</p>
+                                <h2 class="fs-4 fw-bold text-cor-destaque-branco">Delflex text-cor-destaque-branco</h2>
+                                <p class="mb-0 text-cor-destaque-branco">Especializada em produção de Sifão para pia tanque lavatório com diversos modelos</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xxl-4 mb-5">
                         <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
-                                <img src="{{ url_for('static', filename='fotos_site/logo_fifty.png') }}" alt="" width="100" height="80">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0 bg-cor-terciaria-laranja">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div>
+                                <img src="{{ url_for('static', filename='fotos_site/logo_3m.jpg') }}" alt="" width="100" height="80">
                                 <hr>
-                                <h2 class="fs-4 fw-bold">PU-40 FIX</h2>
-                                <p class="mb-0">PU profissional para calheiro</p>
+                                <h2 class="fs-4 fw-bold text-cor-destaque-branco">Fitas 3M - Imperial </h2>
+                                <p class="mb-0 text-cor-destaque-branco">Fitas isolantes 3M: proteção elétrica confiável e duradoura </p>
                             </div>
                         </div>
                     </div>
@@ -99,14 +123,14 @@
         </section>
 
     <!-- Catalogo-->
-    <section id="section-catalogo">
-     <header class="py-5">
-            <div class="container px-lg-5">
-                <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
-                    <div class="m-4 m-lg-5">
-                        <h1 class="display-5 fw-bold">Acesse nosso catálogo</h1>
-                        <p class="fs-4">Confira todos nossos produtos disponíveis.</p>
-                        <a class="btn btn-primary btn-lg" href="/static/catalogo/catalogo.pdf" >Download do PDF</a>
+    <section id="section-catalogo ">
+     <header class="py-5 ">
+            <div class="container px-lg-5 ">
+                <div class="p-4 p-lg-5 bg-cor-primaria-marrom rounded-3 text-center ">
+                    <div class="m-4 m-lg-5 ">
+                        <h1 class="display-5 text-cor-destaque-branco fw-bold">Acesse nosso catálogo</h1>
+                        <p class="fs-4 text-cor-destaque-branco">Confira todos nossos produtos disponíveis.</p>
+                        <a class="btn btn-dark btn-lg" href="/static/catalogo/catalogo.pdf" >Download do PDF</a>
                     </div>
                 </div>
             </div>
@@ -116,13 +140,13 @@
             <!-- Contato -->
          <header class="py-5">
             <div class="container px-lg-5">
-                <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+                <div class="p-4 p-lg-5 bg-cor-primaria-marrom rounded-3 text-center">
                     <div class="m-4 m-lg-5">
-                        <h1 class="display-5 fw-bold">Contato</h1>
-                        <p class="fs-4">Venha fazer parte de nossa história.</p>
+                        <h1 class="display-5 fw-bold text-cor-destaque-branco">Contato</h1>
+                        <p class="fs-4 text-cor-destaque-branco">Venha fazer parte de nossa história.</p>
                         <div class="row">
 
-                            <a class="btn btn-primary btn-lg" href="{{ url_for('trabalheconosco')}}" >Contato</a>
+                            <a class="btn btn-dark btn-lg" href="{{ url_for('trabalheconosco')}}" >Contato</a>
                         </div>
 
                     </div>
