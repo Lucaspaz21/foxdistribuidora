@@ -17,14 +17,27 @@
 </head>
 <body>
 
+    <style>
+        :root {
+            --cor-primaria-marrom: #C68642;
+            --cor-secundaria-laranja: #E89F58;
+            --cor-destaque-branco: #FFFFFF;
+        }
+
+        .bg-cor-secundaria-laranja {
+            background-color: var(--cor-secundaria-laranja);
+        }
+    </style>
+
     {% include 'navbar.html' %}
 
-      <header class="bg-primary custom-gradient text-warning">
+        <header class="bg-primary custom-gradient text-warning bg-cor-secundaria-laranja">
             <div class="container px-4 text-center pt-2">
-                <h1 class="fw-bolder mt-5">FOX Distribuidora</h1>
-                <p class="lead fw-bolder ">Distribuidora e Comércio |
+                <h1 class="fw-bolder mt-5 text-white">FOX Distribuidora</h1>
+                <p class="lead fw-bolder text-white">Distribuidora e Comércio |
                     Del Mouro Representação de Materiais Para Construção</p>
-                <a class="btn btn-lg btn-dark mb-2" >Agora muito mais perto de você</a>
+                <a class="btn btn-lg btn-dark mb-2 fw-bolder">Agora muito mais perto de você</a>
+
             </div>
         </header>
 
