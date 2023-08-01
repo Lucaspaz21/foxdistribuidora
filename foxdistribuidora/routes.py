@@ -1,6 +1,6 @@
 import os
 import secrets
-from flask import render_template, url_for, request, flash, redirect
+from flask import render_template, url_for, request, flash, redirect, send_file
 from foxdistribuidora.forms import FormDadosTrabalheConosco, FormContato
 from foxdistribuidora import app
 import smtplib
@@ -247,6 +247,13 @@ def trabalheconosco():
 @app.route("/sobre")
 def sobre():
     return render_template('sobre.html')
+
+
+@app.route('/sitemap.xml')
+def sitemap():
+    caminho_completo = os.path.join(app.root_path, 'static/', 'sitemap.xml')
+    sitemap_file_path = caminho_completo  # Substitua pelo caminho completo do seu sitemap.xml
+    return send_file(sitemap_file_path, mimetype='application/xml')
 
 
 
