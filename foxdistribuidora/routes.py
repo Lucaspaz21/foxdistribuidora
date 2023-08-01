@@ -1,6 +1,6 @@
 import os
 import secrets
-from flask import render_template, url_for, request, flash, redirect, send_file, , send_from_directory
+from flask import render_template, url_for, request, flash, redirect, send_file, send_from_directory
 from foxdistribuidora.forms import FormDadosTrabalheConosco, FormContato
 from foxdistribuidora import app
 import smtplib
