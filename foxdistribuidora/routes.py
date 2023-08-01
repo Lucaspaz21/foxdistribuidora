@@ -1,6 +1,6 @@
 import os
 import secrets
-from flask import render_template, url_for, request, flash, redirect, send_file
+from flask import render_template, url_for, request, flash, redirect, send_file, , send_from_directory
 from foxdistribuidora.forms import FormDadosTrabalheConosco, FormContato
 from foxdistribuidora import app
 import smtplib
@@ -255,6 +255,9 @@ def sitemap():
     sitemap_file_path = caminho_completo  # Substitua pelo caminho completo do seu sitemap.xml
     return send_file(sitemap_file_path, mimetype='application/xml')
 
+@app.route('/robots.txt')
+def robots():
+    return send_from_directory(app.static_folder, 'robots.txt')
 
 
 
